@@ -1,0 +1,19 @@
+f = open('a.txt', 'a')
+num1 = int(input('Enter the first number: '))
+num2 = int(input('Enter the second number: '))
+op = input('Enter the operator: ')
+
+if(op == '+'):
+  print(num1 + num2, file = f)
+      
+if(op == '-'):
+  print(num1 - num2, file = f)
+
+if(op == '*'):
+  print(num1 * num2, file = f)
+
+try:
+  if(op == '/'):
+    print(num1 / num2, file = f)
+except:
+    print('Cannot divide by zero', file = f)
